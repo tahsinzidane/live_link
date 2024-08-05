@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>live link | a real time chatting app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="nav">
+            <!-- <img src="" alt="" srcset=""> -->
+            <p>
+                LiveLink <br>
+                <small>a real-time chatting application</small>
+            </p>
+        </nav>
+
+        <div class="msgContainer">
+            <div id="allMessages">
+                <!-- <p>hi</p> -->
+            </div>
+        </div>
+
+        <div class="sendingField">
+            <input type="text" id="message" placeholder="write message">
+            <button id="sendBtn">send</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./mein.js"></script>
+
+</body>
+
+</html>
