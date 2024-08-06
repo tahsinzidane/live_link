@@ -28,4 +28,6 @@ sendBtn.addEventListener('click', () => {
     const message = messageInput.value;
     console.log(message);
     socket.emit('userMsg', message, userName);
+    // clear the input after send msg
+    messageInput.value = '';
 });
