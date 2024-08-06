@@ -13,13 +13,13 @@ io.on('connection', (socket) => {
 
     // Listen for the 'userName' event from the client
     socket.on('userName', (userName) => {
-        console.log('A new user has joined:', userName);
+        // console.log('A new user has joined:', userName);
         io.emit('Name', userName);
     });
 
     // Listen for 'userMsg' events from clients
     socket.on('userMsg', (message, userName) => {
-        console.log('A new user message:', message, 'from:', userName);
+        // console.log('A new user message:', message, 'from:', userName);
         io.emit('newMsg', message, userName);
     });
 

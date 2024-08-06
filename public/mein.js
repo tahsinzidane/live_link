@@ -17,7 +17,7 @@ const userName = prompt('Enter your name to join...');
 socket.emit('userName', userName);
 
 socket.on('Name', (userName) => {
-    console.log('A new user has joined:', userName);
+    // console.log('A new user has joined:', userName);
     const h_5 = document.createElement('h6');
     h_5.innerHTML = `${userName} has joined the room`;
     allMessages.appendChild(h_5);
@@ -26,7 +26,7 @@ socket.on('Name', (userName) => {
 // Send message on button click
 sendBtn.addEventListener('click', () => {
     const message = messageInput.value;
-    console.log(message);
+    // console.log(message);
     socket.emit('userMsg', message, userName);
     // clear the input after send msg
     messageInput.value = '';
