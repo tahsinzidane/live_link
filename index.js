@@ -1,4 +1,3 @@
-// console.log('hello world')
 const http = require('http');
 const express = require('express');
 const port = 3000;
@@ -7,18 +6,26 @@ const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server); // Use 'io' instead of 'oi'
+const io = new Server(server);
 
-// Handle Socket.io connections
 io.on('connection', (socket) => {
-    socket.on('userMsg', message => {
-        // console.log('a new user message', message)
-        io.emit('newMsg', message);
-    })
+    console.log('A user connected');
 
-    // Optionally, you can handle disconnections
+    // Listen for the 'userName' event from the client
+    socket.on('userName', (userName) => {
+        console.log('A new user has joined:', userName);
+        io.emit('Name', userName);
+    });
+
+    // Listen for 'userMsg' events from clients
+    socket.on('userMsg', (message, userName) => {
+        console.log('A new user message:', message, 'from:', userName);
+        io.emit('newMsg', message, userName);
+    });
+
+    // Handle disconnection
     socket.on('disconnect', () => {
-        console.log('User disconnected', socket.id);
+        console.log('A user disconnected');
     });
 });
 

@@ -32,12 +32,14 @@ body {
 }
 
 .msgContainer {
+    height: 70vh;
     background-color: #e0e0e0;
     border-radius: 8px;
     padding: 10px;
     min-height: 200px;
     overflow-y: auto;
     margin-bottom: 20px;
+    overflow: auto;
 }
 
 #allMessages p {
@@ -46,6 +48,10 @@ body {
     background-color: #fff;
     border-radius: 5px;
     margin-bottom: 5px;
+}
+
+#allMessages h6{
+    margin-left: 35%;
 }
 
 .sendingField {
@@ -105,3 +111,4 @@ body {
         width: 100%;
     }
 }
+

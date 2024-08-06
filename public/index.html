@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>live link | a real time chatting app</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container">
+
+
+
+    <div class="container" id="cont">
 
         <nav class="nav">
             <!-- <img src="" alt="" srcset=""> -->
@@ -20,14 +24,14 @@
         </nav>
 
         <div class="msgContainer">
-            <div id="allMessages">
-                <!-- <p>hi</p> -->
-            </div>
+            <div id="allMessages"></div>
         </div>
 
         <div class="sendingField">
             <input type="text" id="message" placeholder="write message">
-            <button id="sendBtn">send</button>
+            <button id="sendBtn">
+                <i class="ri-send-plane-fill"></i>
+            </button>
         </div>
     </div>
 
