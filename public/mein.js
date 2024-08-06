@@ -6,7 +6,7 @@ const allMessages = document.getElementById('allMessages');
 
 // Handle new messages
 socket.on('newMsg', (message, userName) => {
-    console.log(message, userName);
+    // console.log(message, userName);
     const p = document.createElement('p');
     p.innerHTML = `${userName}: ${message}`;
     allMessages.appendChild(p);
