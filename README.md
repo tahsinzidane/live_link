@@ -1,7 +1,7 @@
 # live_link
 i have made real time chat room with the help of [socket.io](https://socket.io/)
 
-- [live preview](https://dashboard.render.com/)
+- [live preview](https://live-link.onrender.com/)
 
 ## try live link
 first of all you have to clone the repo
