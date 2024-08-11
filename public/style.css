@@ -48,9 +48,12 @@ body {
     background-color: #fff;
     border-radius: 5px;
     margin-bottom: 5px;
+    animation-name: animotion;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-#allMessages h6{
+#allMessages h6 {
     margin-left: 35%;
 }
 
@@ -77,6 +80,37 @@ body {
 
 #sendBtn:hover {
     background-color: #0056b3;
+}
+
+
+#nameCont {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#userName {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#nameSubmit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#errMsg {
+    color: red;
 }
 
 /* Media queries for responsiveness */
@@ -112,3 +146,20 @@ body {
     }
 }
 
+/* massege sending animation */
+@keyframes animotion {
+    from {
+        opacity: 0;
+        margin-left: 200px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+.hideMeinContainer,
+.hideNameContainer {
+    display: none;
+}
