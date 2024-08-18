@@ -51,6 +51,12 @@ body {
     animation-name: animotion;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    font-size: 20;
+}
+
+#allMessages p span{
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #allMessages h6 {

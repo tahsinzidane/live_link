@@ -54,17 +54,23 @@ takenUserName.addEventListener('keypress', (event) => {
     }
 });
 
+
 // Handle new messages
 socket.on('newMsg', (message, userName) => {
     const p = document.createElement('p');
-    p.innerHTML = `${userName}: ${message}`;
+    const creatSpan = document.createElement('span');
+    creatSpan.innerHTML = userName + '<br>'; 
+    p.innerHTML = `&#9656; ${message}`;
+    p.insertBefore(creatSpan, p.firstChild); 
     allMessages.appendChild(p);
     notifySound.play();
 });
 
+
 // Notify when a user joins the room
+const h_5 = document.createElement('h6');
+
 socket.on('Name', (userName) => {
-    const h_5 = document.createElement('h6');
     h_5.innerHTML = `${userName} has joined the room`;
     allMessages.appendChild(h_5);
     notifySound.play();
@@ -72,9 +78,8 @@ socket.on('Name', (userName) => {
 
 // Notify when a user leaves the chat
 socket.on('user_left', (userName) => {
-    const hfive = document.createElement('h6');
-    hfive.innerHTML = `${userName} left the chat`;
-    allMessages.appendChild(hfive);
+    h_5.innerHTML = `${userName} left the room`;
+    allMessages.appendChild(h_5);
 });
 
 
