@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>live link | a real time chatting app</title>
+    <title>Live Link | A Real-Time Chatting App</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
@@ -24,37 +24,37 @@
     <meta name="twitter:description" content="A real-time chatting application for seamless communication.">
     <meta name="twitter:image" content="./img/chat_lgo.png">
     <meta name="twitter:site" content="@yourTwitterHandle">
-
 </head>
 
 <body>
 
-    <div id="nameCont">
-        <h1>welcome to live-link</h1>
-        <label for="userName">enter your name to join</label> <br>
-        <input type="text" id="userName">
-        <input type="submit" id="nameSubmit" value="submit">
+    <div id="nameCont" class="name-container">
+        <h1>Welcome to LiveLink</h1>
+        <label for="userName">Enter your name to join</label> <br>
+        <input type="text" id="userName" placeholder="Your name">
+        <input type="submit" id="nameSubmit" value="Join Chat">
         <p id="errMsg"></p>
     </div>
 
-    <div class="container" id="cont">
+    <div class="chat-container hideMeinContainer" id="cont">
 
         <nav class="nav">
-            <p>
-                LiveLink <img src="./img/chat_lgo.png" height="20px" alt="" srcset="">
-                <br>
-                <small>a real-time chatting application</small>
-            </p>
+            <div class="brand">
+                <img src="./img/chat_lgo.png" alt="LiveLink Logo" height="40px">
+                <div>
+                    <h2>LiveLink</h2>
+                    <small>A real-time chatting application</small>
+                </div>
+            </div>
         </nav>
 
-        <div class="msgContainer">
-            <div id="allMessages">
-                <h6>don't share your personal information</h6>
-            </div>
+        <div class="msgContainer" id="allMessages">
+            <h6>Don't share your personal information</h6>
         </div>
 
         <div class="sendingField">
-            <input type="text" id="message" placeholder="write message">
+            <div class="list"></div>
+            <input type="text" id="message" placeholder="Write a message...">
             <button id="sendBtn" type="submit">
                 <i class="ri-send-plane-fill"></i>
             </button>

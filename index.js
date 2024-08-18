@@ -8,11 +8,19 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
+let users = {};
+
 io.on('connection', (socket) => {
     // Listen for the 'userName' event from the client
     socket.on('userName', (userName) => {
-        socket.userName = userName; 
+        socket.userName = userName;
+        users[socket.id] = userName;
         io.emit('Name', userName);
+    });
+
+    // Handle request for user list
+    socket.on('requestUserList', () => {
+        socket.emit('userList', Object.values(users));
     });
 
     // Listen for 'userMsg' events from clients
@@ -24,6 +32,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         if (socket.userName) {
             io.emit('user_left', socket.userName);
+            delete users[socket.id];
         }
     });
 });
